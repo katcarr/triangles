@@ -24,14 +24,19 @@ $(function(){
     var side2 = parseFloat($("#side2").val());
     var side3 = parseFloat($("#side3").val());
 
+
+
     if(side1 && side2 && side3){
 
       var result = triangles(side1, side2, side3);
 
-      $("#triangle-type").text(result);
-
-      $("#results").show();
-      event.preventDefault();
+      if(result === "not a triangle"){
+        $("#no-triangle").show();
+      }else{
+        $("#triangle-type").text(result);
+        $("#triangle").show();
+      }
+        event.preventDefault();
     }else{
       alert("Please enter a valid number for each side");
     }
