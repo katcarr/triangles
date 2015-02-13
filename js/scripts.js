@@ -20,9 +20,9 @@ var triangles = function(side1,side2,side3){
 
 $(function(){
   $("form#triangle-form").submit(function(event){
-    var side1 = parseInt($("#side1").val());
-    var side2 = parseInt($("#side2").val());
-    var side3 = parseInt($("#side3").val());
+    var side1 = parseFloat($("#side1").val());
+    var side2 = parseFloat($("#side2").val());
+    var side3 = parseFloat($("#side3").val());
 
     if(side1 && side2 && side3){
 
@@ -33,7 +33,7 @@ $(function(){
       $("#results").show();
       event.preventDefault();
     }else{
-      alert("Please enter a valid number for each side")
+      alert("Please enter a valid number for each side");
     }
 
     });
