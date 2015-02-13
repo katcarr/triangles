@@ -24,8 +24,6 @@ $(function(){
     var side2 = parseFloat($("#side2").val());
     var side3 = parseFloat($("#side3").val());
 
-
-
     if(side1 && side2 && side3){
 
       var result = triangles(side1, side2, side3);
@@ -40,10 +38,6 @@ $(function(){
     }else{
       alert("Please enter a valid number for each side");
     }
-
-    });
-
-
-
+  });
 
 });
