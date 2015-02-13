@@ -15,5 +15,9 @@ describe("triangles", function(){
     expect(triangles(2,3,12)).to.equal("not a triangle");
   });
 
+  // it("will return 'right '+ isosceles or scalene if it is a right triangle", function(){
+  //   expect(triangles(5,12,13)).to.equal("right scalene")
+  // });
+
 
 });
