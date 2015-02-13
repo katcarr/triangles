@@ -18,19 +18,26 @@ var triangles = function(side1,side2,side3){
 
 
 
-$(function (){
+$(function(){
   $("form#triangle-form").submit(function(event){
     var side1 = parseInt($("#side1").val());
     var side2 = parseInt($("#side2").val());
     var side3 = parseInt($("#side3").val());
 
-    var result = triangles(side1, side2, side3);
+    if(side1 && side2 && side3){
 
-    $("#triangle-type").text(result);
+      var result = triangles(side1, side2, side3);
 
-    $("#results").show();
-    event.preventDefault();
-  });
+      $("#triangle-type").text(result);
+
+      $("#results").show();
+      event.preventDefault();
+    }else{
+      alert("Please enter a valid number for each side")
+    }
+
+    });
+
 
 
 
